@@ -11,7 +11,12 @@ router.get('/', function(req, res, next) {
 router.get('/register', signup.showform);
 
 router.get('/login', login.showform);
+router.post('/login',login.login);
 
 router.post('/register',signup.formprocess);
+
+// router.post('/register',function(req, res){
+//   console.log(req.body.nam);
+// });
 
 module.exports = router;
